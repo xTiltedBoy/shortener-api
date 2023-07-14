@@ -20,6 +20,3 @@ logs/
 
 # Node.js heap snapshots
 *.heapsnapshot
-
-# URLS.JSON
-urls.json
