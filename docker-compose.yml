@@ -10,4 +10,4 @@ services:
     ports:
       - 2000:2000
     volumes:
-      - /mnt/datos/ShortenerAPI:/
+      - /mnt/datos/ShortenerAPI:/mnt/datos/ShortenerAPI
