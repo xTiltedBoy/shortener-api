@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   backend:
-    image: "xtiltedboy/ShortenerAPI"
+    image: "xtiltedboy/shortener-api"
     restart: 'unless-stopped'
     pull_policy: build
     build:
