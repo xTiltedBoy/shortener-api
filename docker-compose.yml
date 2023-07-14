@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  backend:
+    image: "xtiltedboy/ShortenerAPI"
+    restart: 'unless-stopped'
+    build:
+      context: "."
+    ports:
+      - nginx:2000:2000
