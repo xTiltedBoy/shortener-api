@@ -3,10 +3,6 @@ import * as urlServices from '../services/url'
 
 const router = express.Router()
 
-router.get('/', (_req, res) => {
-    res.send(urlServices.getEntries())
-})
-
 router.get('/id/:id', (req, res) => {
     const url = urlServices.findById(Number(req.params.id))
     return (url != null) ? res.send(url) : res.sendStatus(404)
