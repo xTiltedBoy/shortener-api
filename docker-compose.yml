@@ -3,6 +3,7 @@ services:
   backend:
     image: "xtiltedboy/ShortenerAPI"
     restart: 'unless-stopped'
+    pull_policy: build
     build:
       context: "."
     ports:
