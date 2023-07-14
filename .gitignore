@@ -1,0 +1,24 @@
+# NPM packages
+node_modules/
+
+# Compiled TypeScript source
+dist/
+
+# dotenv files
+# .env
+
+# Log files
+logs/
+
+# SQLite databases
+*.db
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Node.js heap snapshots
+*.heapsnapshot
+
+# URLS.JSON
+urls.json
