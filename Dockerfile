@@ -1,6 +1,6 @@
 FROM node:20.4.0-alpine3.18
 
-WORKDIR /mnt/datos/ShortenerAPI
+WORKDIR ./src
 
 COPY package*.json ./
 
