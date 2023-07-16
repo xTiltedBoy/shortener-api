@@ -3,7 +3,7 @@ import * as urlServices from '../services/url'
 
 const router = express.Router()
 
-router.get('/r/:shortenUrl', (req, res) => {
+router.get('/:shortenUrl', (req, res) => {
     const url = urlServices.redirect(req.params.shortenUrl)
     return (url != null) ? res.send(url) : res.sendStatus(404)
 })

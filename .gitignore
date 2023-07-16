@@ -4,6 +4,7 @@ node_modules/
 # Compiled TypeScript source
 dist/
 build/
+content-api/
 
 # dotenv files
 # .env
