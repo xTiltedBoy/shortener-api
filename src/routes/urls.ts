@@ -3,12 +3,17 @@ import * as urlServices from '../services/url'
 
 const router = express.Router()
 
-router.get('/id/:id', (req, res) => {
+router.get('/r/:shortenUrl', (req, res) => {
+    const url = urlServices.redirect(req.params.shortenUrl)
+    return (url != null) ? res.send(url) : res.sendStatus(404)
+})
+
+router.get('/q/id/:id', (req, res) => {
     const url = urlServices.findById(Number(req.params.id))
     return (url != null) ? res.send(url) : res.sendStatus(404)
 })
 
-router.get('/shortenUrl/:shortenUrl', (req, res) => {
+router.get('/q/shortenUrl/:shortenUrl', (req, res) => {
     const url = urlServices.findByShortenUrl(req.params.shortenUrl)
     return (url != null) ? res.send(url) : res.sendStatus(404)
 })

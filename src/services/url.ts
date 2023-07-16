@@ -6,6 +6,13 @@ const urls: UrlEntry[] = JSON.parse(fs.readFileSync('/content-api/urls.json', 'u
 
 export const getEntries = (): Array<UrlEntry> => urls
 
+export const redirect = (shortenUrl: string): string | undefined => {
+    const entry = urls.find(u => u.shortenUrl === shortenUrl)
+    const redirect = '<html> <body> <script type="text/javascript"> windows.location="' + entry?.sourceUrl + '"; </script> </body> </html>'
+    
+    return redirect
+}
+
 export const findById = (id: number): UrlEntry | undefined => {
     const entry = urls.find(u => u.id === id)
     return entry
