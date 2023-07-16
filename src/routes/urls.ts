@@ -18,10 +18,20 @@ router.get('/q/shortenUrl/:shortenUrl', (req, res) => {
     return (url != null) ? res.send(url) : res.sendStatus(404)
 })
 
-router.post('/', (req, res) => {
+router.post('/standard-entry', (req, res) => {
+    const { sourceUrl } = req.body
+
+    const newUrlEntry = urlServices.addStandardEntry({
+        sourceUrl
+    })
+
+    res.json(newUrlEntry)
+})
+
+router.post('/custom-entry', (req, res) => {
     const { shortenUrl, sourceUrl } = req.body
 
-    const newUrlEntry = urlServices.addEntry({
+    const newUrlEntry = urlServices.addCustomEntry({
         shortenUrl,
         sourceUrl
     })
