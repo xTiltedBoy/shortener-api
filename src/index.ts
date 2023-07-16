@@ -4,7 +4,7 @@ import urlRouter from './routes/urls'
 const app = express()
 app.use(express.json())
 
-const PORT = 2000
+const PORT = 4000
 
 app.use('/api/urls', urlRouter)
 

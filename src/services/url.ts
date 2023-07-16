@@ -2,7 +2,7 @@ import { UrlEntry, newUrlEntry } from '../types'
 
 import fs from 'fs'
 
-const urls: UrlEntry[] = JSON.parse(fs.readFileSync('/mnt/datos/shortener-api/urls.json', 'utf-8'))
+const urls: UrlEntry[] = JSON.parse(fs.readFileSync('/content-api/urls.json', 'utf-8'))
 
 export const getEntries = (): Array<UrlEntry> => urls
 
@@ -27,7 +27,7 @@ export const addEntry = (newUrlEntry: newUrlEntry): UrlEntry => {
     urls.push(newUrl)
 
     const parsedUrls = JSON.stringify(urls)
-    fs.writeFile('/mnt/datos/shortener-api/urls.json', parsedUrls, (error) => {
+    fs.writeFile('/content-api/urls.json', parsedUrls, (error) => {
         if (error) throw error
     })
 
