@@ -1,6 +1,6 @@
 version: "3.9"
 services:
-  backend:
+  shortener-api:
     image: "xtiltedboy/shortener-api"
     container_name: shortener-api
     restart: 'unless-stopped'
