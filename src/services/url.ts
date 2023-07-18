@@ -3,7 +3,7 @@ import { UrlEntry, newUrlEntry } from '../types'
 import fs from 'fs'
 
 const urls: UrlEntry[] = JSON.parse(fs.readFileSync('/content-api/urls.json', 'utf-8'))
-const alphabet = 'a1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+const alphabet = 'a1234567890ABCDEFGHIJKLMNPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
 export const getEntries = (): Array<UrlEntry> => urls
 
